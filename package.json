@@ -1,0 +1,24 @@
+{
+  "name": "friend-finder",
+  "version": "1.0.0",
+  "description": "Find a friend. Full-stack site that will take in the results of users' surveys, compare them, and display the best overall match.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsevalieu/FriendFinder.git"
+  },
+  "author": "Eva Lieu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itsevalieu/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/itsevalieu/FriendFinder#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  }
+}
