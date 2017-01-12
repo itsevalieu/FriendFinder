@@ -1,20 +1,23 @@
 //Data
-//==============================================
-var data = [];
+//============================================================
+var surveyResults = [
+	{
+	  name:"Ahmed",
+	  photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+	  scores:[
+	     5,
+	     1,
+	     4,
+	     4,
+	     5,
+	     1,
+	     2,
+	     5,
+	     4,
+	     1
+		]
+	}
+];
 
-var results = {
-	name: $("#name").val(),
-	photo: $("#imageLink").val().trim(),
-	results: [
-		$("#question1"), 
-		$("#question2"), 
-		$("#question3")
-		$("#question4"),
-		$("#question5"),
-		$("#question6"),
-		$("#question7"),
-		$("#question8"),
-		$("#question9"),
-		$("#question10")
-	]
-}
+//Export object for accessibility to other files
+module.exports = surveyResults;

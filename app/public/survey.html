@@ -3,6 +3,8 @@
 <head>
 	<title>Friend Finder</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery.js"></script>
+<!--	<script type="text/javascript" src="../data/friends.js"></script>	-->
 </head>
 <body>
 <div class="container">
@@ -11,128 +13,172 @@
 	
 	<form id="surveyResults" role="form">
 	    <label>Name (Required)</label><br>
-	    <input type="text" placeholder=" Name" id="name">
-	    
+	    <input type="text" placeholder=" Name" id="name" class="form-control">
 	    <br><br>
-
 	    <label>Link to Photo Image (Required)</label><br>
-	    <input type="text" placeholder=" Image Link" id="imageLink">
+	    <input type="text" placeholder=" Image Link" id="imageLink" class="form-control">
 		<!--Questions-->
-		<h2>Question 1</h2>
-		<p>You rarely do something out of sheer curiosity.</p>
-		<select data-placeholder id="question1">
-			<option value></option>
-			<option value="1">1 (Strongly Disagree)</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5 (Strongly Agree)</option>
-		</select>
-		
-		<h2>Question 2</h2>
-		<p>People can rarely upset you.</p>
-		<select data-placeholder id="question2">
-			<option value></option>
-			<option value="1">1 (Strongly Disagree)</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5 (Strongly Agree)</option>
-		</select>
-
-		<h2>Question 3</h2>
-		<p>It is often difficult for you to relate to other people's feelings.</p>
-		<select data-placeholder id="question3">
-			<option value></option>
-			<option value="1">1 (Strongly Disagree)</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5 (Strongly Agree)</option>
-		</select>
-
-		<h2>Question 4</h2>
-		<p>In a discussion, truth sould be more important than people's sensitivities.</p>
-		<select data-placeholder id="question4">
-			<option value></option>
-			<option value="1">1 (Strongly Disagree)</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5 (Strongly Agree)</option>
-		</select>
-
-		<h2>Question 5</h2>
-		<p>You rarely get carried away by fantasies and ideas.</p>
-		<select data-placeholder id="question5">
-			<option value></option>
-			<option value="1">1 (Strongly Disagree)</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5 (Strongly Agree)</option>
-		</select>	
-
-		<h2>Question 6</h2>
-		<p>You think that everyone's views should be respected regardless of whether they are supported by facts or 
-		not.</p>
-		<select data-placeholder id="question6">
-			<option value></option>
-			<option value="1">1 (Strongly Disagree)</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5 (Strongly Agree)</option>
-		</select>	
-
-		<h2>Question 7</h2>
-		<p>You feel more energetic after spending time with a group of people.</p>
-		<select data-placeholder id="question7">
-			<option value></option>
-			<option value="1">1 (Strongly Disagree)</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5 (Strongly Agree)</option>
-		</select>
-
-		<h2>Question 8</h2>
-		<p>Your mind is always buzzing with unexplored ideas and plans.</p>
-		<select data-placeholder id="question8">
-			<option value></option>
-			<option value="1">1 (Strongly Disagree)</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5 (Strongly Agree)</option>
-		</select>
-
-		<h2>Question 9</h2>
-		<p>Generally speaking, you rely more on your experience than your imagination.</p>
-		<select data-placeholder id="question9">
-			<option value></option>
-			<option value="1">1 (Strongly Disagree)</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5 (Strongly Agree)</option>
-		</select>
-
-		<h2>Question 10</h2>
-		<p>You find it easy to stay relaxed and focused even when there is some pressure.</p>
-		<select data-placeholder id="question10">
-			<option value></option>
-			<option value="1">1 (Strongly Disagree)</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5 (Strongly Agree)</option>
-		</select>
-
+		<div class="form-group">
+			<h2>Question 1</h2>
+			<p>You rarely do something out of sheer curiosity.</p>
+			<select id="question1" class="form-control">
+				<option value></option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<h2>Question 2</h2>
+			<p>People can rarely upset you.</p>
+			<select id="question2" class="form-control">
+				<option value></option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<h2>Question 3</h2>
+			<p>It is often difficult for you to relate to other people's feelings.</p>
+			<select id="question3" class="form-control">
+				<option value></option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<h2>Question 4</h2>
+			<p>In a discussion, truth sould be more important than people's sensitivities.</p>
+			<select id="question4" class="form-control">
+				<option value></option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<h2>Question 5</h2>
+			<p>You rarely get carried away by fantasies and ideas.</p>
+			<select id="question5" class="form-control">
+				<option value></option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>	
+		<div class="form-group">
+			<h2>Question 6</h2>
+			<p>You think that everyone's views should be respected regardless of whether they are supported by facts or 
+			not.</p>
+			<select id="question6" class="form-control">
+				<option value></option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>	
+		<div class="form-group">
+			<h2>Question 7</h2>
+			<p>You feel more energetic after spending time with a group of people.</p>
+			<select id="question7" class="form-control">
+				<option value></option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<h2>Question 8</h2>
+			<p>Your mind is always buzzing with unexplored ideas and plans.</p>
+			<select id="question8" class="form-control">
+				<option value></option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<h2>Question 9</h2>
+			<p>Generally speaking, you rely more on your experience than your imagination.</p>
+			<select id="question9" class="form-control">
+				<option value></option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+			</div>
+		<div class="form-group">
+			<h2>Question 10</h2>
+			<p>You find it easy to stay relaxed and focused even when there is some pressure.</p>
+			<select id="question10" class="form-control">
+				<option value></option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
 	<br><hr>	
-
-    <button type="submit" class="btn btn-primary btn-lg">Submit</button><br>
+    <button type="submit" class="btn btn-primary btn-lg submit">Submit</button><br>
 	</form>
 </div>
+<script type="text/javascript">
+//Data
+//==============================================
+	$(".submit").on("click", function(){
+		//Grab form data
+		var results = {
+			name: $("#name").val().trim(),
+			photo: $("#imageLink").val().trim(),
+			results: [
+				$("#question1").val(), 
+				$("#question2").val(), 
+				$("#question3").val(),
+				$("#question4").val(),
+				$("#question5").val(),
+				$("#question6").val(),
+				$("#question7").val(),
+				$("#question8").val(),
+				$("#question9").val(),
+				$("#question10").val()
+			]
+		};
+		
+		console.log("Results: " + results);	
+
+		var currentURL = window.location.origin;
+
+		$.post(currentURL + "/api-friends", results,
+			function(data){
+				if(data){
+					alert("Yay! Data sent." + data[0]);
+				}
+				else{
+					alert("Aww, Data not sent.");
+				}
+		});
+	});
+</script>
 </body>
 </html>
