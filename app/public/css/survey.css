@@ -1,0 +1,60 @@
+html {
+	height: 100%;
+}
+body {
+	background: #FF9770;
+	min-height: 100%;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	align-content: space-between;
+}
+footer {
+	display: flex;
+	flex-flow: row;
+	justify-content: flex-end;
+	padding: 0px 20px;
+}
+
+/*Navbar*/
+.navbar {
+	border-radius: 0px;
+	background: #fff;
+}
+.navbar-brand {
+	color: #000;
+}
+/*Main*/
+.form-container {
+	background: #fff;
+	border-radius: 5px;
+}
+.page-header {
+	text-align: center;
+}
+.form-margin {
+	margin: 50px 50px;
+	/*border: 1px solid purple;*/
+}
+.marg {
+	padding-left: 50px;
+}
+/*Form*/
+form {
+	/*border: 1px solid red;*/
+}
+.form-control {
+	width: 90%;
+	/*border: 1px solid pink;*/
+}
+.form-group {
+	/*border: 1px solid green;*/
+}
+
+.col-lg-6 {
+	/*border: 1px solid blue;*/
+}
+.btn {
+	margin-bottom: 50px;
+	float: right;
+}

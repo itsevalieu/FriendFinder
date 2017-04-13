@@ -1,0 +1,35 @@
+html {
+	height: 100%;
+}
+body {
+	background: #FF9770;
+	min-height: 100%;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	align-content: space-between;
+}
+footer {
+	display: flex;
+	flex-flow: row;
+	justify-content: flex-end;
+	padding: 0px 20px;
+}
+
+/*Navbar*/
+.navbar {
+	border-radius: 0px;
+	background: #fff;
+}
+.navbar-brand {
+	color: #000;
+}
+/*Main*/
+.jumbotron {
+	background: #fff;
+}
+
+/*Modal*/
+.modal {
+	background: white;
+}

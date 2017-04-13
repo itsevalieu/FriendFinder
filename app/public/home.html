@@ -3,17 +3,34 @@
 <head>
 	<title>Friend Finder</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylehsheet" href="./css/home.css">
+	<link rel="stylesheet" href="./css/home.css">
 </head>
 <body>
-<div class="container">
-	<div class="jumbotron">
-	  <h1><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Friend Finder</h1><hr>
-	  <p>Answer a few basic questions.</p>
-	  <p>Then find the friend with the greatest compatibility!</p>
-	  <p><a class="btn btn-primary btn-md" href="/survey" role="button">Go to survey</a></p>
-	</div>
-	<p><a href="/api-friends">API Friends List</a>	
-</div>
+	<!-- Navbar -->
+	<nav class="navbar">
+	    <div class="navbar-header">
+			<a class="navbar-brand" href="/">
+				<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+			</a>
+			<a class="navbar-brand" href="/">Friend Finder</a>
+	    </div>
+	</nav>
+	<!-- Main -->
+	<main class="container">
+		<div class="jumbotron">
+			<div class="container">
+				<h1>Friend Finder</h1>
+				<hr/>
+				<p>Answer a few basic questions.</p>
+				<p>Then find the friend with the greatest compatibility!</p>
+				<p><a class="btn btn-primary btn-lg" href="/survey" role="button">Go to survey</a></p>
+			</div>	
+		</div>
+	</main>
+	<!-- Footer -->
+	<footer>
+		<p><a href="/api-friends">API Friends List</a>		
+	</footer>
+	
 </body>
 </html>
