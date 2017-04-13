@@ -58,3 +58,41 @@ form {
 	margin-bottom: 50px;
 	float: right;
 }
+
+/*Modal*/
+.modal {
+	background: white;
+	height: 500px;
+	width: 500px;
+	position: fixed;
+	top: 10%;
+	left: 30%;
+
+}
+.btn-x {
+	color: black;
+	
+}
+.img {
+	height: 200px;
+	width: 250px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
